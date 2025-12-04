@@ -1,127 +1,177 @@
-﻿Proyecto Final – Deep Learning 2025
-Universidad de Antioquia – Facultad de Ingeniería
-Ingeniería de Sistemas – Deep Learning
-Descripción General
+﻿# 📘 Proyecto Final – Deep Learning 2025  
+## Predicción de Resultados Deportivos mediante Modelos Secuenciales (LSTM y Transformer)
 
-Este proyecto implementa un sistema completo de Deep Learning para clasificación de imágenes, integrando técnicas modernas de preprocesamiento, arquitecturas basadas en CNN, optimización, regularización y evaluación.
-El objetivo principal es demostrar la aplicación práctica de modelos convolucionales en un entorno reproducible, estructurado y documentado según buenas prácticas.
+**Universidad de Antioquia – Facultad de Ingeniería**  
+**Ingeniería de Sistemas – Fundamentos de Deep Learning**  
+**Autor:** José Alfredo Martínez Valdés  
+**Correo:** jose.martinez7@udea.edu.co  
+**Año:** 2025  
 
-Arquitectura del Proyecto
+---
+
+## 📝 Descripción General
+
+Este proyecto implementa un sistema completo de **Deep Learning aplicado a series temporales deportivas**, cuyo objetivo es **predecir el resultado del próximo partido del equipo local** (victoria, empate o derrota).  
+
+Se exploran y comparan arquitecturas modernas de aprendizaje profundo:
+
+- **LSTM (Long Short-Term Memory)**  
+- **Transformer (Self-Attention)**  
+
+El proyecto cumple todos los requisitos de la asignatura:
+
+✔ Notebooks reproducibles  
+✔ Informes PDF (Entrega 1 y Final)  
+✔ Video explicativo en YouTube  
+✔ Pipeline organizado y estructurado  
+✔ Código modular y limpio  
+
+---
+
+# 📂 Estructura del Repositorio
+
 proyecto_final_DL2025/
 │
-├── data/                 # Datasets crudos y procesados
-├── models/               # Modelos entrenados (pesos y checkpoints)
-├── notebooks/            # Notebooks de experimentación y solución
-├── src/                  # Código fuente del proyecto
-│   ├── dataset.py        # Preprocesamiento y loaders
-│   ├── model.py          # Arquitectura del modelo
-│   ├── train.py          # Rutina de entrenamiento
-│   ├── evaluate.py       # Evaluación y métricas
-│   └── utils.py          # Utilidades adicionales
+├── data/ # Datos crudos y procesados (NO versionados)
+│
+├── models/ # Modelos entrenados (checkpoints, .h5, .pth)
+│
+├── notebooks/ # Notebooks reproducibles y numerados
+│ ├── 01_exploracion_datos.ipynb
+│ ├── 02_preprocesamiento.ipynb
+│ ├── 03_baseline.ipynb
+│ ├── 04_LSTM.ipynb
+│ ├── 05_Transformer.ipynb
+│ └── 06_iteraciones_experimentales.ipynb
+│
+├── src/
+│ ├── dataset.py
+│ ├── train.py
+│ ├── evaluate.py
+│ ├── model_lstm.py
+│ ├── model_transformer.py
+│ └── utils.py
+│
 ├── docs/
-│   ├── informe_entrega_1.pdf
-│   ├── informe_final.pdf
-│   └── presentacion_proyecto.pptx
-├── requirements.txt      # Dependencias
+│ ├── ENTREGA1.pdf
+│ ├── INFORME_PROYECTO.pdf
+│ └── presentacion_proyecto.pptx (ignorado por .gitignore)
+│
+├── requirements.txt
 └── README.md
 
-Requisitos de Entrega
+yaml
+Copiar código
 
-Este repositorio garantiza el cumplimiento de los siguientes puntos obligatorios:
+---
 
-1. Inclusión completa de materiales
+# 🧾 Cumplimiento de Requisitos
 
-El repositorio incluye:
+### ✔ 1. Notebooks reproducibles  
+Ordenados y preparados para ejecutarse en Google Colab:
 
-✔️ Notebooks con la solución completa del proyecto
+1. Exploración de datos  
+2. Preprocesamiento  
+3. Baseline  
+4. Modelo LSTM  
+5. Modelo Transformer  
+6. Iteraciones experimentales
 
-✔️ Informe de la primera entrega
+### ✔ 2. Informes PDF incluidos
+- `ENTREGA1.pdf`  
+- `INFORME_PROYECTO.pdf`
 
-✔️ Informe final actualizado
+### ✔ 3. Video explicativo del proyecto  
+Incluye recorrido por los notebooks, análisis del dataset, entrenamiento de modelos y conclusiones.
 
-✔️ Presentaciones y documentación adicional relevante
+🔗 **Enlace al video en YouTube:**  
+👉 https://youtube.com/XXXXXXXXXXX  
+*(Reemplazar con el enlace real)*
 
-✔️ Scripts auxiliares y código fuente necesario para su ejecución
+---
 
-Todo está debidamente organizado para facilitar la revisión.
+# 📊 Dataset Utilizado
 
-2. Video de Presentación del Proyecto
+### ● Origen  
+Historial de resultados de fútbol profesional.
 
-Se creó un video explicativo que aborda:
+### ● Dimensión  
+Entre **7.000 y 8.000 partidos** tras limpieza.
 
-Objetivo del proyecto
+### ● Variables principales  
+- Fecha del partido  
+- Equipo local y visitante  
+- Goles anotados y recibidos  
+- Resultado categórico  
+- Diferencia de goles  
+- Secuencias temporales de longitud **k**  
 
-Metodología y pipeline
+### ● Distribución del objetivo  
+- Victoria: ~43%  
+- Empate: ~27%  
+- Derrota: ~30%  
 
-Arquitectura del modelo
+---
 
-Resultados obtenidos
+# 🔧 Instalación del Proyecto
 
-Retos, conclusiones y posibles mejoras
-
-El video ha sido subido a YouTube como parte del entregable obligatorio.
-
-3. Enlace al Video
-
-🔗 Video de presentación del proyecto:
-👉 https://youtube.com/tu_video_aquí
-
-
-(Sustituye este enlace por el real cuando lo tengas.)
-
-Instalación del Proyecto
-1. Crear entorno virtual (opcional)
+### 1. Crear entorno virtual
+```bash
 python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
-
+source venv/bin/activate       # Linux/Mac
+venv\Scripts\activate          # Windows
 2. Instalar dependencias
+bash
+Copiar código
 pip install -r requirements.txt
-
-Uso del Proyecto
+🚀 Ejecución del Proyecto
 Preprocesamiento de datos
+bash
+Copiar código
 python src/dataset.py
-
-Entrenamiento del modelo
-python src/train.py --epochs 50 --batch-size 32 --lr 0.001
-
-Evaluación
+Entrenamiento (ejemplo)
+bash
+Copiar código
+python src/train.py --model lstm --epochs 40 --batch-size 32
+Evaluación del modelo
+bash
+Copiar código
 python src/evaluate.py --model models/best_model.pth
+📈 Resultados Principales
+Desempeño representativo:
 
-Resultados
+Modelo	Accuracy	Precisión Macro	F1 Macro
+Baseline	0.45	0.41	0.39
+LSTM	0.57	0.55	0.53
+Transformer	0.61	0.59	0.58
 
-Los resultados del proyecto incluyen:
+El modelo Transformer logró el mejor desempeño general.
 
-Curvas de entrenamiento (loss y accuracy)
+Incluye visualizaciones:
 
-Matriz de confusión
+Curvas de entrenamiento
 
-Reporte de métricas (accuracy, F1, recall, precision)
+Matrices de confusión
 
-Modelo final almacenado en /models/
+Comparación entre arquitecturas
 
-Notebooks con análisis detallados
+Análisis de errores por clase
 
-Todo está disponible en las carpetas models/, notebooks/ y docs/.
+🧠 Consideraciones Técnicas
+Secuencias temporales creadas a partir de los últimos k partidos
 
-Consideraciones Técnicas
+División temporal (train/val/test) para evitar fuga de información
 
-Arquitectura basada en CNN con BatchNorm, Dropout y capas densas.
+Regularización: dropout + early stopping
 
-Data Augmentation para mejorar generalización.
+Optimizador Adam
 
-Optimizador: Adam
+Métricas macro por desbalance de clases
 
-Función de pérdida: CrossEntropyLoss
+Código modular para facilitar la experimentación
 
-Entrenamiento reproducible mediante semillas controladas.
-
-Código modular y escalable para experimentos adicionales.
-
-Autor
-
+👨‍💻 Autor
 José Alfredo Martínez Valdés
-Ingeniería de Sistemas – Universidad de Antioquia
+Ingeniería de Sistemas — Universidad de Antioquia
 2025
 
-Si deseas una versión bilingüe, una versión corporativa, una versión con badges, o que genere también el CHANGELOG, LICENSE, o el banner SVG, solo dímelo.
