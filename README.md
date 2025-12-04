@@ -84,8 +84,9 @@ Ordenados y preparados para ejecutarse en Google Colab:
 ### ✔ 3. Video explicativo del proyecto  
 Incluye recorrido por los notebooks, análisis del dataset, entrenamiento de modelos y conclusiones.
 
-🔗 **Enlace al video en YouTube:**  
-👉 https://youtube.com/XXXXXXXXXXX  
+🔗 **Enlace al video en YouTube:** 
+ 
+👉 https://youtu.be/3QCbO28zlaQ
 *(Reemplazar con el enlace real)*
 
 ---
