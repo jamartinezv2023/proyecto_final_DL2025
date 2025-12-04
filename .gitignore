@@ -1,0 +1,96 @@
+# ======================================
+# ARCHIVOS GENERALES A IGNORAR
+# ======================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ======================================
+# POWERPOINT — NO SUBIR PPTX/PPT
+# ======================================
+*.ppt
+*.pptx
+*.pps
+*.ppsx
+*.odp
+
+# Archivos temporales de Office
+~$*.pptx
+~$*.ppt
+~$*
+
+# ======================================
+# SCRIPTS QUE NO DEBEN SUBIRSE
+# ======================================
+*.ps1
+
+# ======================================
+# PDF — SOLO SE PERMITEN LOS DE LA ENTREGA
+# ======================================
+*.pdf
+
+# EXCEPCIONES (estos SÍ suben)
+!docs/ENTREGA1.pdf
+!docs/INFORME_PROYECTO.pdf
+
+# ======================================
+# NOTEBOOKS — conservar .ipynb pero no checkpoints
+# ======================================
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/*
+
+# ======================================
+# MODELOS — NO subir modelos entrenados
+# ======================================
+models/
+*.h5
+*.hdf5
+*.keras
+*.tflite
+*.pth
+*.pt
+*.ckpt
+*.joblib
+*.pkl
+*.sav
+
+# ======================================
+# DATOS — NO subir datasets pesados
+# ======================================
+data/
+data/raw/
+data/processed/
+*.csv
+*.xlsx
+*.zip
+*.rar
+*.7z
+
+# ======================================
+# ENTORNOS VIRTUALES
+# ======================================
+venv/
+ENV/
+env/
+.venv/
+
+# ======================================
+# CACHE Y COMPILADOS
+# ======================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ======================================
+# LOGS Y SALIDAS AUTOMÁTICAS
+# ======================================
+*.log
+logs/
+notebooks_outputs/
+
+# ======================================
+# CONFIG LOCAL / KAGGLE
+# ======================================
+.kaggle/
+kaggle.json
