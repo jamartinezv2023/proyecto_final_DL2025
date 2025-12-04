@@ -86,8 +86,9 @@ Incluye recorrido por los notebooks, análisis del dataset, entrenamiento de mod
 
 🔗 **Enlace al video en YouTube:** 
  
-👉 https://youtu.be/3QCbO28zlaQ
-*(Reemplazar con el enlace real)*
+👉 https://youtu.be/kgHkwDF5C9g
+
+
 
 ---
 
